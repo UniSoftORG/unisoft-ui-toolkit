@@ -1,0 +1,24 @@
+{
+  "name": "unisoft-ui-toolkit",
+  "version": "1.0.0",
+  "description": "A great UI toolkit used to build Unisoft website. Use it if you like. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test\\"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PIYatGitHub/unisoft-ui-toolkit.git"
+  },
+  "keywords": [
+    "UI",
+    "toolkit",
+    "shared"
+  ],
+  "author": "PIYAtGitHub and RadeKGB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PIYatGitHub/unisoft-ui-toolkit/issues"
+  },
+  "homepage": "https://github.com/PIYatGitHub/unisoft-ui-toolkit#readme"
+}
