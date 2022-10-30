@@ -1,7 +1,7 @@
 {
   "name": "unisoft-ui-toolkit",
-  "version": "1.0.9",
-  "description": "A great UI toolkit used to build Unisoft website. Use it if you like. ",
+  "version": "1.0.10",
+  "description": "A great UI toolkit used to build Unisoft website. Use it if you like.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
@@ -22,26 +22,26 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @tomchen/example-typescript-package"
+    "addscope": "node tools/packagejson name @piyatnpm/unisoft-ui-toolkit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PIYatGitHub/unisoft-ui-toolkit.git"
+    "url": "git+https://github.com/UniSoftORG/unisoft-ui-toolkit.git"
   },
   "keywords": [
     "UI",
     "toolkit",
     "shared"
   ],
-  "author": "PIYAtGitHub and RadeKGB",
+  "author": "UniSoftORG",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PIYatGitHub/unisoft-ui-toolkit/issues"
+    "url": "https://github.com/UniSoftORG/unisoft-ui-toolkit/issues"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/PIYatGitHub/unisoft-ui-toolkit#readme",
+  "homepage": "https://github.com/UniSoftORG/unisoft-ui-toolkit#readme",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
