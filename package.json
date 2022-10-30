@@ -8,7 +8,6 @@
   "types": "dist/types/index.d.js",
   "scripts": {
     "copy-files": "copyfiles -u 1 lib/**/*.scss lib/**/*.css dist/",
-    "publish": "npm publish",
     "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postversion": "git push --follow-tags",
