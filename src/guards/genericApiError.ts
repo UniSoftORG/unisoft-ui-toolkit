@@ -1,4 +1,4 @@
-import { IGenericApiError } from "../interfaces/generics";
+import { IGenericApiError } from "../interfaces/common";
 
 
 export const isGenericApiError = (object: any): object is IGenericApiError => {

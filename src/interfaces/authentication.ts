@@ -1,4 +1,4 @@
-import { IGenericApiError } from "./generics";
+import { IGenericApiError } from "./common";
 
 export interface ILoginResponse {
   token: string;
