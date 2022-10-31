@@ -48,6 +48,7 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^18.11.7",
     "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "cookies-next": "^2.1.1",
