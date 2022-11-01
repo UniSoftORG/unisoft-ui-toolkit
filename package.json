@@ -1,6 +1,6 @@
 {
   "name": "unisoft-ui-toolkit",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "registry-url": "https://registry.npmjs.org/",
   "description": "A great UI toolkit used to build Unisoft website. Use it if you like.",
   "main": "dist/cjs/index.js",
