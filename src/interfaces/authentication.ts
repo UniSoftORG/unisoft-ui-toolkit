@@ -1,4 +1,4 @@
-import { IGenericApiError } from "./buildingBlocks";
+import { IGenericApiError } from "./generics";
 
 export interface ILoginResponse {
   token: string;

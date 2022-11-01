@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 
 import React from "react";
-import { State } from "../interfaces/buildingBlocks";
+import { State } from "../interfaces/generics";
 import { UserState } from "../interfaces/user";
 
 export const elementWithAuth = (Component: () => JSX.Element, state: State<UserState>) => {

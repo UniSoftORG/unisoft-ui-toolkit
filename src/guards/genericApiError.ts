@@ -1,4 +1,4 @@
-import { IGenericApiError } from "../interfaces/buildingBlocks";
+import { IGenericApiError } from "../interfaces/generics";
 
 
 export const isGenericApiError = (object: any): object is IGenericApiError => {
