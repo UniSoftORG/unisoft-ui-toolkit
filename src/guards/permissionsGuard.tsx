@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 import { Redirects } from "../interfaces/enums";
-import { State } from "../interfaces/common";
+import { State } from "../interfaces/generics";
 import { UserState } from "../interfaces/user";
 
 
