@@ -1,4 +1,4 @@
-import { SupportedApiMethods } from "../interfaces/generics";
+import { SupportedApiMethods } from "../interfaces/buildingBlocks";
 import { IBreadcrumbs} from "../interfaces/breadCrumbs";
 import { getCookie } from "cookies-next";
 
