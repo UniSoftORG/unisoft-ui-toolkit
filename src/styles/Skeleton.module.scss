@@ -1,0 +1,14 @@
+@import "variables/default.var.module";
+
+.skeleton {
+  animation: skeleton-loading 1.4s infinite;
+  background: linear-gradient(110deg, #313131 8%, #3d3d3d 18%, #313131 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+}
+
+@keyframes skeleton-loading {
+  to {
+    background-position-x: -200%;
+  }
+}

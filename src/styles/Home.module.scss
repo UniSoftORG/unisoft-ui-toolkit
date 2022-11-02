@@ -1,0 +1,33 @@
+@import "mixins/devices.mix.module";
+@import "variables/default.var.module";
+
+.main {
+  position: relative;
+  text-align: center;
+  height: 50vh;
+  width: 100%;
+  top: 25vh;
+
+  @include mobile {
+  }
+}
+
+.footer {
+  .stagingInfo {
+    background: $primary;
+    position: fixed;
+    bottom: 2rem;
+    padding: 1rem;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+
+    span {
+      font-weight: 600;
+    }
+
+    p {
+      text-align: center;
+      font-size: 11px;
+    }
+  }
+}

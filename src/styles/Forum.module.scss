@@ -1,0 +1,260 @@
+@import "variables/default.var.module";
+
+.h1 {
+  letter-spacing: 1.4px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.content {
+  margin: 32px;
+}
+
+.breadCrumbs {
+  display: flex;
+  padding-bottom: 1rem;
+  flex-direction: column;
+
+  div {
+    display: flex;
+  }
+
+  .topLeft {
+    position: relative;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 32px;
+
+    button {
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+      padding: 12px 24px 12px 24px;
+      font-size: 22px;
+    }
+  }
+
+  .title {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px;
+  }
+
+  p {
+    color: $gray-color;
+  }
+
+  .breadHistory {
+    font-size: 14px;
+    margin: 12px 32px;
+    display: inline-flex;
+    left: 0;
+
+    .img {
+      img {
+        border: 1px solid $purple;
+        border-radius: 100%;
+      }
+    }
+
+    .char {
+      position: relative;
+      top: 23.5px;
+    }
+
+    a {
+      font-family: "Work Sans", sans-serif;
+
+      span {
+        top: 13px;
+        right: 2px;
+      }
+    }
+  }
+}
+
+.subCategories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 16px 32px 16px;
+
+  div > * {
+    padding: 0 4px 0 4px;
+    flex-grow: 1;
+    margin: auto;
+  }
+
+  .subBody {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+    position: relative;
+    max-width: 100%;
+    display: inline-flex;
+    font-size: 14px;
+    background: linear-gradient(0deg, $dark-card-background 40%, $primary 500%);
+    border-radius: 20px;
+    min-width: 180px;
+    padding: 8px;
+
+    .subTitle {
+      display: inline-block;
+
+      a {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        position: relative;
+      }
+
+      p {
+        font-size: 12px;
+        color: $gray-color;
+      }
+    }
+
+    img {
+      border-radius: 100%;
+    }
+  }
+}
+
+.card {
+  padding: 4px 22px 4px 0;
+  margin: 0 0 16px;
+  background: $dark-card-background;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 8px;
+
+  .subCategories {
+    position: relative;
+    top: 16px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+      margin-bottom: auto;
+      line-height: 18px;
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      span:first-child {
+        color: $gray-color;
+      }
+    }
+
+    .general {
+      justify-content: flex-start;
+      font-weight: 600;
+      grid-column: span 2;
+
+      .title {
+        display: inline-block;
+        margin-left: 16px;
+
+        a {
+          font-family: "Work Sans", sans-serif;
+          position: relative;
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 12px;
+          color: $gray-color;
+        }
+      }
+    }
+  }
+}
+
+.bottomSheetDefaults {
+  --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
+  --rsbs-bg: rgb(52, 204, 103);
+  --rsbs-handle-bg: hsla(0, 0%, 0%, 0.14);
+  --rsbs-max-w: 50vw;
+  --rsbs-ml: 25vw;
+  --rsbs-mr: env(safe-area-inset-right);
+  --rsbs-overlay-rounded: 16px;
+}
+
+.bottomSheetDoneBtn {
+  width: 12.5vw;
+  padding: 1vh 0vh;
+  background-color: white;
+  color: #6665fe;
+  margin-left: 16.75vw;
+  border-radius: 1vh;
+  font-size: 1.2vw;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.editor {
+  background-color: white;
+}
+
+.editorWrapper {
+  background-color: white;
+  width: 40vw;
+  margin: 0 auto;
+  color: black;
+}
+
+.quill {
+  max-height: 60%;
+  height: 60%;
+  min-height: 60%;
+}
+
+.ql-editor {
+  color: white;
+}
+.ql-container {
+  height: 80%;
+}
+
+.forumFormWrapper {
+  background-color: white;
+  color: black;
+  flex: 1;
+  width: 100%;
+  align-self: center;
+  padding: 1vw;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputFieldBottomSheet {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin: 0;
+  margin-right: 1vw;
+  padding: 14px;
+  background: transparent;
+  color: black;
+}
+
+.errorInputFieldBottomSheet {
+  color: white;
+  font-weight: bold;
+  padding: 1vh;
+  user-select: none;
+}
+
+.inputAndErrorRow {
+  display: flex;
+  flex-direction: row;
+  padding: 1vw 0vw;
+}
