@@ -1,6 +1,5 @@
 import Error from "./Error";
 
-import styles from "../../styles/Components.module.scss";
 import { IInputFieldProps } from "../interfaces/generics";
 import React from "react";
 
@@ -20,7 +19,7 @@ const InputField = (props: IInputFieldProps) => {
   return (
     <>
       <input
-        className={`${styles.inputField} ${inputCustomClassName ?? ""}`}
+        className={`$inputField ${inputCustomClassName ?? ""}`}
         placeholder={placeholder ?? "Input data here..."}
         type={fieldType}
         autoComplete={autoComplete ?? "off"}

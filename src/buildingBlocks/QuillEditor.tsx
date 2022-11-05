@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import React from "react";
-import styles from "../styles/Forum.module.scss";
 
 interface IQuillEditorProps {
   onQuillChanged: (value: string) => void;
@@ -9,7 +8,7 @@ interface IQuillEditorProps {
 const QuillEditor = (props: IQuillEditorProps) => {
   return (
     <QuillNoSSRWrapper
-      className={styles.quill}
+      className={'quill'}
       theme="snow"
       modules={modules}
       formats={formats}
