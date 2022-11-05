@@ -18,20 +18,10 @@ export interface IInputFieldProps {
 }
 
 export interface IButtonProps {
-  buttonType: ButtonTypes;
   label: string;
   shouldLoad?: boolean;
-  onPressed: () => void;
-  appearence?: string; // pass in a set of classes here to override looks, will have effect on 'custom' type
-}
-
-export enum ButtonTypes {
-  primary,
-  secondary,
-  success,
-  info, //perhaps sth blue here?
-  callToAction, //a big old call to action bugger
-  custom,
+  onPressed: () => Promise<void>;
+  appearence?: string; // pass in a set of classes here
 }
 
 export interface IGenericApiError {
