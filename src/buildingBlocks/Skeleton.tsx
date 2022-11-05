@@ -1,6 +1,7 @@
 import React from "react";
 
-const Skeleton = (props: { font?: number, width?: number, height?: number }) => {
+const Skeleton = (props: { font?: number, width?: number, height?: number, appearence?: string }) => {
+
     const divStyle = {
         width: props.width ?? 300,
         height: props.font ? props.font : props.height ?? 22,
@@ -8,8 +9,7 @@ const Skeleton = (props: { font?: number, width?: number, height?: number }) => 
         borderRadius: 10
     };
 
-
-    return (<div style={divStyle} className={'skeleton'}/>);
+    return (<div style={divStyle} className={props.appearence}/>);
 };
 
 export default Skeleton;
