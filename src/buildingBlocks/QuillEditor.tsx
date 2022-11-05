@@ -2,13 +2,14 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 interface IQuillEditorProps {
+  appearence: string; 
   onQuillChanged: (value: string) => void;
   placeholder?: string;
 }
 const QuillEditor = (props: IQuillEditorProps) => {
   return (
     <QuillNoSSRWrapper
-      className={'quill'}
+      className={props.appearence}
       theme="snow"
       modules={modules}
       formats={formats}
