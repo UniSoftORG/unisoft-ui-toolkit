@@ -12,14 +12,14 @@ const InputField = (props: IInputFieldProps) => {
     placeholder,
     autoComplete,
     error,
-    inputCustomClassName,
+    appearence,
     errorCustomClassName,
   } = props;
 
   return (
     <>
       <input
-        className={`$inputField ${inputCustomClassName ?? ""}`}
+        className={`${appearence ?? ""}`}
         placeholder={placeholder ?? "Input data here..."}
         type={fieldType}
         autoComplete={autoComplete ?? "off"}

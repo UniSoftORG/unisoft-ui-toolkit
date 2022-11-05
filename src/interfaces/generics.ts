@@ -13,7 +13,7 @@ export interface IInputFieldProps {
   autoComplete?: string;
   placeholder?: string;
   error?: string;
-  inputCustomClassName?: string;
+  appearence?: string;
   errorCustomClassName?: string;
 }
 
