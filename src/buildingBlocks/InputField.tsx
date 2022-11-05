@@ -30,7 +30,7 @@ const InputField = (props: IInputFieldProps) => {
         }}
       />
       {error ? (
-        <Error error={error} customClassName={errorCustomClassName} />
+        <Error error={error} appearence={errorCustomClassName} />
       ) : null}
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Error = (props: { error: string; customClassName?: string }) => {
-  const { error, customClassName } = props;
+const Error = (props: { error: string; appearence?: string }) => {
+  const { error, appearence } = props;
   return (
-    <span className={`$errorText ${customClassName ?? ""}`}>
+    <span className={`${appearence ?? ""}`}>
       {error}
     </span>
   );
