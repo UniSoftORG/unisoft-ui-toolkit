@@ -1,7 +1,6 @@
 import { SupportedApiMethods } from "../interfaces/generics";
-import { IBreadcrumbs} from "../interfaces/breadCrumbs";
+import { IBreadcrumbs } from "../interfaces/breadCrumbs";
 import { getCookie } from "cookies-next";
-
 
 /// Global api request class. Use this to put any api request through
 export class ApiRequest {
@@ -44,6 +43,7 @@ export class ApiRequest {
 
     const response = await fetch(
       // `http://127.0.0.1:8000/api${endpoint}`,
+      // TODO: Move this to an env file
       `https://api.staging.gamespace.gg/api${endpoint}`,
       {
         method: method,
@@ -84,7 +84,7 @@ export class ApiRequest {
     );
   };
 
-   post = async <Type>(
+  post = async <Type>(
     endpoint: string,
     payload?: string,
     additionalHeaders?: { [key: string]: string }
@@ -97,7 +97,7 @@ export class ApiRequest {
     );
   };
 
-   delete = async <Type>(
+  delete = async <Type>(
     endpoint: string,
     payload?: string,
     additionalHeaders?: { [key: string]: string }
@@ -110,7 +110,7 @@ export class ApiRequest {
     );
   };
 
-   patch = async <Type>(
+  patch = async <Type>(
     endpoint: string,
     payload?: string,
     additionalHeaders?: { [key: string]: string }

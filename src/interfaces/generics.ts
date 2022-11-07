@@ -38,3 +38,7 @@ export enum SupportedApiMethods {
   "DELETE" = "DELETE",
   "PATCH" = "PATCH",
 }
+
+export interface IGenericStyles {
+  readonly [key: string]: string;
+}
