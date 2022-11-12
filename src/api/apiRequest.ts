@@ -1,15 +1,23 @@
 import { SupportedApiMethods } from "../interfaces/generics";
 import { IBreadcrumbs } from "../interfaces/breadCrumbs";
-import { getCookie } from "cookies-next";
 
 /// Global api request class. Use this to put any api request through
 export class ApiRequest {
-  requestHeaders = (additionalHeaders?: { [key: string]: string }) => {
-    const token = getCookie("token");
+  token: string;
+  constructor(token: string) {
+    this.token = token;
+  }
 
+  setToken = (newToken: string) => {
+    if (!newToken.length) throw new Error("bad data!");
+
+    this.token = newToken;
+  };
+
+  requestHeaders = (additionalHeaders?: { [key: string]: string }) => {
     let headers = {
       "content-type": "application/json",
-      Authorization: `Bearer ${token}` ?? undefined,
+      Authorization: `Bearer ${this.token}` ?? undefined,
       accept: "application/json",
     };
 

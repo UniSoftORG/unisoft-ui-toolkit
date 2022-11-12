@@ -1,13 +1,13 @@
 // A HighOrderComponent to host the logic we need in order to achieve public and private routes.
 import { NextPage } from "next";
-
-import { useRouter } from "next/router";
-
 import React from "react";
 import { State } from "../interfaces/generics";
 import { UserState } from "../interfaces/user";
 
-export const elementWithAuth = (Component: () => JSX.Element, state: State<UserState>) => {
+export const elementWithAuth = (
+  Component: () => JSX.Element,
+  state: State<UserState>
+) => {
   const Permissions = () => {
     if (!state.userData) return <></>;
 
@@ -20,13 +20,13 @@ export const elementWithAuth = (Component: () => JSX.Element, state: State<UserS
 
 const pageWithAuth = (Component: NextPage, state: State<UserState>) => {
   const Auth = () => {
-    const router = useRouter();
     const isWindowDefined = typeof window !== "undefined";
 
     // If user is not logged in, return an empty component and push to login page
     if (!state.userData && isWindowDefined) {
-      router.push("/login");
-      return <></>;
+      // router.push("/login");
+      // return <></>;
+      throw new Error("Do not push page - bad data!");
     }
 
     // If user is logged in, return original component
