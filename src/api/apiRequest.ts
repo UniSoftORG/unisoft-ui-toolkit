@@ -11,6 +11,7 @@ export class ApiRequest {
   setToken = (newToken: string) => {
     if (!newToken.length) throw new Error("bad data!");
 
+    console.log(">>>>>>> NEW TOKEN HAS BEEN SET UP >>>>>>>");
     this.token = newToken;
   };
 
