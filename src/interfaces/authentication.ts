@@ -1,4 +1,4 @@
-import { IGenericApiError } from "./generics";
+import { IGenericApiError, IGenericStyles } from "./generics";
 
 export interface ILoginResponse {
   token: string;
@@ -45,4 +45,5 @@ export interface AuthState {
 
 export interface I2FAForm {
   onRedirect: (to: string) => void;
+  styles: IGenericStyles;
 }

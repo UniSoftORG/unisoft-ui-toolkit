@@ -11,7 +11,6 @@ import InputField from "../buildingBlocks/InputField";
 import { RootState } from "../store/store";
 import { isRequired } from "../validators/genericValidator";
 import { setUserData } from "../store/slices/userSlice";
-import styles from "../../styles/Components.module.scss";
 import { validateCode } from "../api/auth";
 import { typeGuard } from "../index";
 import Button from "../buildingBlocks/Button";
@@ -21,6 +20,7 @@ import { I2FAForm } from "../interfaces/authentication";
 const TwoFactorAuthenticationForm = (props: I2FAForm) => {
   const authData = useSelector((state: RootState) => state.authData);
   const dispatch = useDispatch();
+  const { styles } = props;
 
   const handleCodeInput = (v: string) => {
     dispatch(setTwoFactorAuthCodeError(isRequired(v)));
@@ -38,7 +38,6 @@ const TwoFactorAuthenticationForm = (props: I2FAForm) => {
     }
 
     if (typeGuard.isLoginResponse(response.data)) {
-      // localStorage.setItem("userData", JSON.stringify(response.data));
       dispatch(setUserData(response.data));
       dispatch(wipeAuthData());
       props.onRedirect("/games");
