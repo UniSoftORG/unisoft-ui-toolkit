@@ -42,3 +42,7 @@ export interface AuthState {
   registerApiError: IGenericApiError | undefined;
   twoFactorAuthApiError: IGenericApiError | undefined;
 }
+
+export interface I2FAForm {
+  onRedirect: (to: string) => void;
+}
