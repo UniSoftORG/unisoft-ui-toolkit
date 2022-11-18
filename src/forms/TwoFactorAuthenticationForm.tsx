@@ -40,9 +40,10 @@ const TwoFactorAuthenticationForm = (props: I2FAForm) => {
     if (typeGuard.isLoginResponse(response.data)) {
       dispatch(setUserData(response.data));
       dispatch(wipeAuthData());
-      props.onRedirect("/games");
+      props.onRedirect(true);
     }
   };
+
   return (
     <div className={styles.loginForm}>
       <form noValidate>
