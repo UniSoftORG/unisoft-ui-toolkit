@@ -44,6 +44,6 @@ export interface AuthState {
 }
 
 export interface I2FAForm {
-  onRedirect: (allow: boolean) => void;
+  onRedirect: (response: ILoginResponse) => void;
   styles: IGenericStyles;
 }

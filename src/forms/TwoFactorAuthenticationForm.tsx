@@ -40,7 +40,7 @@ const TwoFactorAuthenticationForm = (props: I2FAForm) => {
     if (typeGuard.isLoginResponse(response.data)) {
       dispatch(setUserData(response.data));
       dispatch(wipeAuthData());
-      props.onRedirect(true);
+      props.onRedirect(response.data);
     }
   };
 
