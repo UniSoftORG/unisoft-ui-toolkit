@@ -11,6 +11,6 @@ const authGuard = { pageWithAuth, elementWithAuth };
 const permissionsGuard = { pageWithPermissions, elementWithPermissions };
 const typeGuard = { isGenericApiError, isLoginResponse };
 
-const api = new ApiRequest(""); // a singllke instance to use. NB: Init that with the token later on!!!
+const api = new ApiRequest(""); // DO NOT USE THIS IN APPS. LOCAL UNAUTHENTICATED INSTANCE.
 
 export { sayHi, authGuard, permissionsGuard, typeGuard, api };
