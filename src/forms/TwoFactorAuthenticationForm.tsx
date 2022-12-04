@@ -1,8 +1,6 @@
 import {
-  setTwoFactorApiError,
   setTwoFactorAuthCode,
   setTwoFactorAuthCodeError,
-  wipeAuthData,
 } from "../store/slices/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,8 +8,6 @@ import Error from "../buildingBlocks/Error";
 import InputField from "../buildingBlocks/InputField";
 import { RootState } from "../store/store";
 import { isRequired } from "../validators/genericValidator";
-import { setUserData } from "../store/slices/userSlice";
-import { validateCode } from "../api/auth";
 import { typeGuard } from "../index";
 import Button from "../buildingBlocks/Button";
 import React from "react";
@@ -28,22 +24,7 @@ const TwoFactorAuthenticationForm = (props: I2FAForm) => {
   };
 
   const disableSend = !!authData.twoFactorAuthCodeError;
-  const handleFormSubmit = async () => {
-    dispatch(setTwoFactorApiError(undefined));
-
-    const response = await validateCode(authData.twoFactorAuthCode);
-    if (typeGuard.isGenericApiError(response.data)) {
-      dispatch(setTwoFactorApiError(response.data));
-      return;
-    }
-
-    if (typeGuard.isLoginResponse(response.data)) {
-      dispatch(setUserData(response.data));
-      dispatch(wipeAuthData());
-      props.onRedirect(response.data);
-    }
-  };
-
+  const handleFormSubmit = async () => await props.onTwoFactorClicked();
   return (
     <div className={styles.loginForm}>
       <form noValidate>

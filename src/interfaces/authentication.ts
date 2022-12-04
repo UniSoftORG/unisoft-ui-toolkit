@@ -44,6 +44,6 @@ export interface AuthState {
 }
 
 export interface I2FAForm {
-  onRedirect: (response: ILoginResponse) => void;
+  onTwoFactorClicked: () => Promise<void>;
   styles: IGenericStyles;
 }
