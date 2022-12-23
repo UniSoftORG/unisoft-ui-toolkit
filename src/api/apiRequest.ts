@@ -1,5 +1,5 @@
 import { SupportedApiMethods } from "../interfaces/generics";
-import { IBreadcrumbs } from "../interfaces/breadCrumbs";
+import { IBreadcrumbs, IMeta } from "../interfaces/breadCrumbs";
 
 /**
  * Global api request class. Use this to put any api request through
@@ -45,15 +45,22 @@ export class ApiRequest {
 
   getResponse = async <Type>(
     response: Response
-  ): Promise<{ data: Type; statusCode: number; breadCrumbs: IBreadcrumbs }> => {
+  ): Promise<{
+    data: Type;
+    statusCode: number;
+    breadCrumbs: IBreadcrumbs;
+    meta: IMeta;
+  }> => {
     const json = await response.json();
     const data = response.status < 400 ? json["data"] : json;
     const breadCrumbs = response.status < 400 ? json["breadcrumbs"] : json;
+    const meta = response.status < 400 ? json["meta"] : json;
 
     return {
       data: data as Type,
       breadCrumbs: breadCrumbs as IBreadcrumbs,
       statusCode: response.status,
+      meta: meta,
     };
   };
 
