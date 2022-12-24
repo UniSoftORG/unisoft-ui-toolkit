@@ -88,6 +88,7 @@ export class ApiRequest {
     data: Type;
     statusCode: number;
     breadCrumbs?: IBreadcrumbs;
+    meta?: IMeta;
   }> => {
     return await this.createRequest(
       SupportedApiMethods.GET,
