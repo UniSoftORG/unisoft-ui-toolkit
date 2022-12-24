@@ -26,7 +26,8 @@ export interface IForumState {
     topicContentError: string | undefined;
     topicTitle: string | undefined;
     topicContent: string | undefined;
-    topicCategory: string
+    topicCategory: string | undefined;
+    topicCategoryError: string | undefined;
     htmlTopicContent: string | undefined; //perhaps not needed. I intend to store the formatted HTML here, so w e can display EZ.
 }
 
