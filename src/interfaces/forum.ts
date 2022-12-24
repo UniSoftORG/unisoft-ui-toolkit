@@ -34,5 +34,5 @@ export interface IForumState {
 export interface IForumThreadPayload {
     title: string;
     description: string;
-    category: string;
+    category: string | undefined;
 }
