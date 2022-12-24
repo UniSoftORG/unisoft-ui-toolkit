@@ -1,14 +1,15 @@
 export interface IForumCategories {
-    id: string;
+    id?: string;
     image?: string;
     url_link?: string;
     title: string;
     short_description?: string | undefined;
     long_description?: string | undefined;
-    stats: IForumCategoryStats;
+    stats?: IForumCategoryStats;
     categories?: IForumCategories[];
     sub_categories?: IForumCategories[];
     slug: string;
+    is_locked?: boolean;
 }
 
 export interface IForumCategoryStats {
@@ -25,6 +26,7 @@ export interface IForumState {
     topicContentError: string | undefined;
     topicTitle: string | undefined;
     topicContent: string | undefined;
+    topicCategory: string
     htmlTopicContent: string | undefined; //perhaps not needed. I intend to store the formatted HTML here, so w e can display EZ.
 }
 
