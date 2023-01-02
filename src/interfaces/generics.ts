@@ -8,6 +8,7 @@ export type State<T> = T;
 
 export interface IInputFieldProps {
   fieldType: HTMLInputTypeAttribute;
+  label?: string;
   inputValue: string;
   onInputChange: (value: string) => void;
   autoComplete?: string;
